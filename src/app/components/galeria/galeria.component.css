@@ -1,0 +1,254 @@
+/*=============== BANNER ===============*/
+#banner {
+  /* background-image: url(../../imagenes/logo-banana.jpeg); */
+
+  padding: 0 50px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+/*capa de humo, poner la imagen de fondo*/
+#banner::before {
+  content: "";
+  background: rgba(54, 54, 54, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+}
+.contenido-banner {
+  position: relative;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenido-banner h3 {
+  font-size: 40px;
+  font-weight: 400;
+  padding: 10px 0px;
+}
+.contenido-banner span {
+  font-weight: 600;
+}
+
+.boton-empezar {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(144deg, #0c53eb 15%, #5a77f8 40%, #0004eb);
+  text-transform: uppercase;
+  border: 1px solid #514fc4;
+  padding: 20px 40px;
+  align-self: baseline; /*encoger el bloque creado por flexbox */
+}
+.boton-empezar:hover {
+  background-color: #514fc4;
+}
+
+
+/*=============== PERSONAS ===============*/
+
+#personas {
+  padding: 50px 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#personas img {
+  border-radius: 100%;
+}
+#personas div {
+  padding: 30px 30px;
+}
+#personas div h4 {
+  color: #060481;
+  font-size: 20px;
+  margin: 15px 0px;
+}
+#personas div p {
+  color: #4d4d5c;
+  font-size: 18px;
+}
+.boton-saber-mas {
+  display: inline-block; /*para que no se ponga encima del texto*/
+  text-decoration: none;
+  color: #060481;
+  padding: 10px 30px;
+  border: 3px solid #514fc4;
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: all 0.4s;
+}
+
+.boton-saber-mas:hover {
+  background-color: rgb(3, 3, 114);
+  color: rgb(255, 255, 255);
+}
+
+
+/*RESPONSIVE*/
+@media (max-width: 768px) {
+  /*HEADER RESPONSIVE*/
+  .mostrar-menu,
+  .esconder-menu {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #1a1a20;
+    right: -100%; /*esconder el menu*/
+    top: 0;
+    text-align: center;
+    padding: 100px 0px;
+    z-index: 100; /*para que no se pise*/
+    transition: 0.8s;
+  }
+  .menu a {
+    display: block;
+    padding: 20px;
+  }
+  .esconder-menu {
+    position: absolute;
+    /*subir la x arriba a la derecha*/
+    top: 40px;
+    right: 40px;
+  }
+  /*hace que la hamburguesa se despliegue y la cruz cierre*/
+  #check:checked ~ .menu {
+    right: 0;
+  }
+
+  /*PERSONAS*/
+  #personas {
+    /*es el que tiene propiedad flex*/
+    flex-direction: column;
+  }
+
+
+
+}
+
+
+/*==========CARRUSEL========*/
+
+
+.carousel__contenedor {
+	padding: 40px;
+	position: relative;
+	color: #000000;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: #000000;
+	opacity: 100%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -35px;
+}
+
+.carousel__siguiente {
+	right: -30px;
+}
+
+.carousel__lista {
+    display: flex;
+	overflow: hidden;
+}
+.carousel__lista p {
+	color: #06001a;
+	
+	font-weight: bold;
+padding: 10px;}
+.carousel__elemento {
+	text-align: center;	
+}
+.indicadores{
+	padding: 0px 0px 50px 0px;
+}
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background:  hsl(0, 0%, 0%);
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+@media (max-width: 768px) {
+	/*HEADER RESPONSIVE*/
+	.mostrar-menu,
+	.esconder-menu {
+	  display: block;
+	}
+	.menu {
+	  position: fixed;
+	  width: 100%;
+	  height: 100vh;
+	  background: #1a1a20;
+	  right: -100%; /*esconder el menu*/
+	  top: 0;
+	  text-align: center;
+	  padding: 100px 0px;
+	  z-index: 100; /*para que no se pise*/
+	  transition: 0.8s;
+	}
+	.menu a {
+	  display: block;
+	  padding: 20px;
+	}
+	.esconder-menu {
+	  position: absolute;
+	  /*subir la x arriba a la derecha*/
+	  top: 40px;
+	  right: 40px;
+	}
+	/*hace que la hamburguesa se despliegue y la cruz cierre*/
+	#check:checked ~ .menu {
+	  right: 0;
+	}
+  
+	/*PERSONAS*/
+	#personas {
+	  /*es el que tiene propiedad flex*/
+	  flex-direction: column;
+	}
+
+
+  }
+@media screen and (max-width: 800px) {
+
+	.carousel__lista{
+		width: 80%;
+	}
+.carousel__siguiente {
+	right: 10px;
+}
+.carousel__anterior {
+	left:  10px;
+}
+}

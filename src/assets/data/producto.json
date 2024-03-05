@@ -1,0 +1,48 @@
+
+[
+    {
+        "_id": "1",
+        "nombre":"Piercing de Aro",
+        "descripcion": "Blanco",
+        "categoria": ["Piercing"],
+        "imageUrl":["../../assets/img-productos/arito.jpg"],
+        "precio_venta":10,
+        "precio_regular":18,
+        "created_at": "2024-02-23T16:54:42.214s",
+        "slug": "tipo-piercing-Aro"
+    },
+
+    {
+        "_id": "2",
+        "nombre":"piercing",
+        "descripcion": "Blanco",
+        "categoria": ["Piercing"],
+        "imageUrl":["../../assets/logo-banana.jpeg"],
+        "precio_venta":225,
+        "precio_regular":345,
+        "created_at": "2024-02-23T16:54:42.214s",
+        "slug": "tipo-piercing"
+    },   
+     {
+        "_id": "3",
+        "nombre":"Piercing de Rana",
+        "descripcion": "Piercing de rana negra",
+        "categoria": ["Piercing"],
+        "imageUrl":["../../assets/img-productos/piercing-rana.jpg"],
+        "precio_venta":20,
+        "precio_regular":25,
+        "created_at": "2024-02-23T16:54:42.214s",
+        "slug": "tipo-piercing-rana"
+    },
+    {
+        "_id": "4",
+        "nombre":"Crema BlueMonkey",
+        "descripcion": "Blanco",
+        "categoria": ["Cremas"],
+        "imageUrl":["../../assets/logo-banana.jpeg"],
+        "precio_venta":225,
+        "precio_regular":345,
+        "created_at": "2024-02-23T16:54:42.214s",
+        "slug": "tipo-cremas"
+    }
+]
