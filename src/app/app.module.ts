@@ -12,9 +12,10 @@ import { NavComponent } from './components/nav/nav.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
-import { ProductoListComponent } from './components/producto-list/producto-list.component';
-import { ProductoItemComponent } from './components/producto-item/producto-item.component';
-import { ProductoComponent } from './components/producto/producto.component';
+import { ProductoListComponent } from './components/tienda/producto-list/producto-list.component';
+import { ProductoItemComponent } from './components/tienda/producto-item/producto-item.component';
+import { ProductoComponent } from './components/tienda/producto/producto.component';
+import { TarjetasCreditoComponent } from './components/tienda/tarjetas-credito/tarjetas-credito.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductoComponent } from './components/producto/producto.component';
     TiendaComponent,
     ProductoListComponent,
     ProductoItemComponent,
-    ProductoComponent
+    ProductoComponent,
+    TarjetasCreditoComponent
   ],
   imports: [
     BrowserModule,

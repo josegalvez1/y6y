@@ -5,7 +5,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { GaleriaComponent } from './components/galeria/galeria.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
-import { ProductoComponent } from './components/producto/producto.component';
+import { ProductoComponent } from './components/tienda/producto/producto.component';
 
 const routes: Routes = [
   {

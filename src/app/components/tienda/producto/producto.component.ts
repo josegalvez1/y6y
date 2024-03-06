@@ -14,6 +14,11 @@ export class ProductoComponent implements OnInit, OnDestroy {
   producto: Producto | undefined;
   productoSub: Subscription | undefined;
 
+
+  galeria: Array<any> = [];
+  renderGaleria: Boolean = true;
+  currentImg: string | undefined;
+
   constructor(
     private route: ActivatedRoute,
     private productoService: ProductoService
@@ -25,7 +30,7 @@ this.productoSub= this.productoService.getProducto()
 .subscribe({
   next:(producto:Producto[])=>{
     this.producto = producto.filter(p=> p.slug === this.slug)[0];
-    console.log(this.producto);
+    this.currentImg = this.producto.imageUrl[0]; 
   },
   error:(err:any)=> {
     console.log(err)
@@ -34,5 +39,9 @@ this.productoSub= this.productoService.getProducto()
   }
   ngOnDestroy(): void {
     this.productoSub?.unsubscribe();
+  }
+
+  handleChangeImg(itemImg: string){
+    this.currentImg = itemImg;
   }
 }
